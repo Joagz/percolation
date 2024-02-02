@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e89708db-ef94-4a51-90f3-aa3d77515c25" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/percolation/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/percolation/Percolation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/percolation/Percolation.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/percolation/Percolation.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/percolation/Percolation.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/percolation/PercolationStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/percolation/PercolationStats.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
