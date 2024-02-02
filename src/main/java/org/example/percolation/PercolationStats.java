@@ -1,4 +1,4 @@
-package org.example.percolation;
+//package org.example.percolation;
 
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;

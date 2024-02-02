@@ -1,17 +1,17 @@
-package org.example.percolation;
+//package org.example.percolation;
 
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
 
-    int[][] grid;
-    int[][] openClosedGrid;
-    WeightedQuickUnionUF weightedQuickUnionUF;
-    int topVirtualNode = 0;
-    int bottomVirtualNode;
+    private int[][] grid;
+    private int[][] openClosedGrid;
+    private WeightedQuickUnionUF weightedQuickUnionUF;
+    private int topVirtualNode = 0;
+    private int bottomVirtualNode;
     //    Save grid proportions
-    int size;
-    int openSites = 0;
+    private int size;
+    private int openSites = 0;
 
     public Percolation(int n) {
         grid = new int[n][n];
@@ -37,13 +37,14 @@ public class Percolation {
     // opens the site (row, col) if it is not open already
     public void open(int row, int col) {
 
-        if(isOpen(row, col)){
+        if (isOpen(row, col)) {
             return;
         }
 
         if (row >= size || col >= size) {
-            throw new IllegalArgumentException("Index " + row + " out of bounds");
+            throw new IllegalArgumentException("Array index out of bounds, max col/row is " + size)
         }
+
         int n = grid[row][col];
 
         openClosedGrid[row][col] = 1;
@@ -60,12 +61,12 @@ public class Percolation {
         }
         if (row != 0) {
             if (isOpen(row - 1, col)) {
-                weightedQuickUnionUF.union(n, grid[row-1][col]);
+                weightedQuickUnionUF.union(n, grid[row - 1][col]);
             }
         }
         if (row != size - 1) {
             if (isOpen(row + 1, col)) {
-                weightedQuickUnionUF.union(n, grid[row+1][col]);
+                weightedQuickUnionUF.union(n, grid[row + 1][col]);
             }
         }
 
@@ -75,12 +76,18 @@ public class Percolation {
 
     // is the site (row, col) open?
     public boolean isOpen(int row, int col) {
+        if (row >= size || col >= size) {
+            throw new IllegalArgumentException("Array index out of bounds, max col/row is " + size)
+        }
         int n = openClosedGrid[row][col];
         return n == 1;
     }
 
     // is the site (row, col) connected to the top?
     public boolean isFull(int row, int col) {
+        if (row >= size || col >= size) {
+            throw new IllegalArgumentException("Array index out of bounds, max col/row is " + size)
+        }
         int n = grid[row][col];
         return weightedQuickUnionUF.connected(n, 0);
     }
@@ -92,6 +99,6 @@ public class Percolation {
 
     // does the system percolate?
     public boolean percolates() {
-        return isFull(size-1, size-1);
+        return isFull(size - 1, size - 1);
     }
 }
