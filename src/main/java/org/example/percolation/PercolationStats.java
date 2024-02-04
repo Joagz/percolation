@@ -1,7 +1,9 @@
 package org.example.percolation;
 
+import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
+import edu.princeton.cs.algs4.Stopwatch;
 
 public class PercolationStats {
 
@@ -19,8 +21,8 @@ public class PercolationStats {
         while (i < trials) {
             Percolation p = new Percolation(n);
             while (!p.percolates()) {
-                int r = StdRandom.uniformInt(n) ;
-                int c = StdRandom.uniformInt(n) ;
+                int r = StdRandom.uniformInt(n);
+                int c = StdRandom.uniformInt(n);
                 p.open(r, c);
             }
             openSites[i] = (double) p.numberOfOpenSites() / (n * n);
@@ -52,9 +54,12 @@ public class PercolationStats {
 
     // test client (see below)
     public static void main(String[] args) {
-        PercolationStats s = new PercolationStats(100, 200);
-        System.out.println("mean:\t\t\t=\t" + s.mean());
-        System.out.println("sttdev:\t\t\t=\t" + s.stddev());
-        System.out.println("95% confidence interval:\t\t\t=\t[" + s.confidenceLo() + ", " + s.confidenceHi() + "]");
+        Stopwatch stopwatch = new Stopwatch();
+        PercolationStats s = new PercolationStats(100, 1000);
+        double time = stopwatch.elapsedTime();
+        StdOut.println("mean:\t\t\t=\t" + s.mean());
+        StdOut.println("sttdev:\t\t\t=\t" + s.stddev());
+        StdOut.println("95% confidence interval:\t\t\t=\t[" + s.confidenceLo() + ", " + s.confidenceHi() + "]");
+        StdOut.println("\ncompilation time: "+time);
     }
 }

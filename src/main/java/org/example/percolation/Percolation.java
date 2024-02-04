@@ -36,7 +36,6 @@ public class Percolation {
                 }
                 grid[i][j] = colNumber;
                 colNumber++;
-                openClosedGrid[i][j] = 0;
             }
         }
     }

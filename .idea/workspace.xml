@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e89708db-ef94-4a51-90f3-aa3d77515c25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bitonic/Bitonic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/eggdropping/EggDropping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/threesum/ThreeSum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/percolation/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/percolation/Percolation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/percolation/Percolation.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/percolation/PercolationStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/percolation/PercolationStats.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +30,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/Downloads/algs4.jar!/edu/princeton/cs/algs4/WeightedQuickUnionUF.java" root0="SKIP_INSPECTION" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -43,8 +47,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BinarySearch.executor": "Run",
+    "Application.Bitonic.executor": "Run",
+    "Application.EggDropping.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PercolationStats.executor": "Run",
+    "Application.ThreeSum.executor": "Run",
     "Application.WeightedQuickUnionUF (1).executor": "Run",
     "Application.WeightedQuickUnionUF (2).executor": "Run",
     "Application.WeightedQuickUnionUF.executor": "Run",
@@ -66,13 +74,39 @@
       <recent name="C:\Users\joago\OneDrive\Desktop\Algorithms\Algorithms_01\src\main\java\org\example\percolation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PercolationStats">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+  <component name="RunManager" selected="Application.EggDropping">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.binarysearch.BinarySearch" />
       <module name="Algorithms_01" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.binarysearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bitonic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.bitonic.Bitonic" />
+      <module name="Algorithms_01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.bitonic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EggDropping" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.eggdropping.EggDropping" />
+      <module name="Algorithms_01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.eggdropping.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,40 +127,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeightedQuickUnionUF (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.princeton.cs.algs4.WeightedQuickUnionUF" />
+    <configuration name="ThreeSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.threesum.ThreeSum" />
       <module name="Algorithms_01" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.princeton.cs.algs4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WeightedQuickUnionUF (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="edu.princeton.cs.algs4.WeightedQuickUnionUF" />
-      <module name="Algorithms_01" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.princeton.cs.algs4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WeightedQuickUnionUF" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.princeton.cs.algs4.WeightedQuickUnionUF" />
-      <module name="Algorithms_01" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.princeton.cs.algs4.*" />
+          <option name="PATTERN" value="org.example.threesum.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EggDropping" />
+        <item itemvalue="Application.Bitonic" />
+        <item itemvalue="Application.ThreeSum" />
+        <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.PercolationStats" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.WeightedQuickUnionUF (2)" />
-        <item itemvalue="Application.WeightedQuickUnionUF (1)" />
-        <item itemvalue="Application.WeightedQuickUnionUF" />
       </list>
     </recent_temporary>
   </component>
@@ -162,5 +168,20 @@
       <updated>1706806681385</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/binarysearch/BinarySearch.java</url>
+          <line>5</line>
+          <properties class="org.example.binarysearch.BinarySearch" method="binarySearch">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
