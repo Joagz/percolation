@@ -55,7 +55,7 @@ public class PercolationStats {
     // test client (see below)
     public static void main(String[] args) {
         Stopwatch stopwatch = new Stopwatch();
-        PercolationStats s = new PercolationStats(100, 1000);
+        PercolationStats s = new PercolationStats(100, 100);
         double time = stopwatch.elapsedTime();
         StdOut.println("mean:\t\t\t=\t" + s.mean());
         StdOut.println("sttdev:\t\t\t=\t" + s.stddev());

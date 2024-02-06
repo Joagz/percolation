@@ -24,13 +24,13 @@ public class EggDropping {
             }
 
         }
-        return min + 1;
+        return min+1;
     }
 
     public static void main(String[] args) {
         EggDropping eggDropping = new EggDropping();
 //        Output = 4
-        System.out.println(eggDropping.drop(2, 10));
+        System.out.println(eggDropping.drop(100, 6000));
     }
 
 

@@ -4,8 +4,8 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
 
-    private int[][] grid;
     private int[][] openClosedGrid;
+    private int[][] grid;
     private WeightedQuickUnionUF weightedQuickUnionUF;
     private int topVirtualNode = 0;
     private int bottomVirtualNode;
@@ -14,30 +14,32 @@ public class Percolation {
     private int openSites = 0;
 
     public Percolation(int n) {
+        size = n;
         if (n <= 0) {
             throw new IllegalArgumentException("Grid size must be greater than 0");
         }
+        grid = new int[size][size];
+        openClosedGrid = new int[size][size];
+        weightedQuickUnionUF = new WeightedQuickUnionUF(size * size + 2);
+        bottomVirtualNode = size * size;
 
-        grid = new int[n][n];
-        openClosedGrid = new int[n][n];
-        weightedQuickUnionUF = new WeightedQuickUnionUF(n * n + 2);
-        bottomVirtualNode = n * n;
-        size = n;
-
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= size; i++) {
             weightedQuickUnionUF.union(i, topVirtualNode);
         }
 
-        int colNumber = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i == n - 1) {
+        int colNumber = 1;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (i == 0) {
+                    weightedQuickUnionUF.union(colNumber, topVirtualNode);
+                } else if (i == n - 1) {
                     weightedQuickUnionUF.union(colNumber, bottomVirtualNode);
                 }
                 grid[i][j] = colNumber;
                 colNumber++;
             }
         }
+        
     }
 
 
@@ -60,7 +62,7 @@ public class Percolation {
                 weightedQuickUnionUF.union(n, grid[row][col - 1]);
             }
         }
-        if (col != size-1) {
+        if (col != size - 1) {
             if (isOpen(row, col + 1)) {
                 weightedQuickUnionUF.union(n, grid[row][col + 1]);
             }
@@ -70,9 +72,9 @@ public class Percolation {
                 weightedQuickUnionUF.union(n, grid[row - 1][col]); // Adjust indices to 1-index
             }
         }
-        if (row != size-1  ) {
+        if (row != size - 1) {
             if (isOpen(row + 1, col)) {
-                weightedQuickUnionUF.union(n, grid[row + 1][col]); // Adjust indices to 1-index
+                weightedQuickUnionUF.union(n, grid[row + 1][col]);
             }
         }
 
